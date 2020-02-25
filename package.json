@@ -1,0 +1,34 @@
+{
+  "name": "liquid-api-tester",
+  "version": "1.0.0",
+  "description": "Test APIs connections by trying to fetch them. I really only need this to make health checks in docker orchestrations",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx babel src --out-dir dist",
+    "start": "npx babel src --watch --out-dir dist",
+    "pub": "yarn build && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aldorado/liquid-api-tester.git"
+  },
+  "keywords": [
+    "api",
+    "tests"
+  ],
+  "author": "Anuar Suarez",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/aldorado/liquid-api-tester/issues"
+  },
+  "homepage": "https://github.com/aldorado/liquid-api-tester#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
+}
