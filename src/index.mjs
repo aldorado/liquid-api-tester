@@ -33,7 +33,7 @@ class APITester {
     try {
       const res = await fetch(url);
       testResult = { url, ok: res.ok };
-      if (this._options.throwErrors) {
+      if (this._options.throwErrors && !res.ok) {
         throw new Error(`Url:${url} Status: ${res.status}`);
       }
     } catch (err) {
