@@ -29,10 +29,14 @@ class APITester {
   }
 
   async testUrl(url) {
-    const res = await fetch(url);
-    const testResult = { url, ok: res.ok };
-    if (this._options.throwErrors && !res.ok) {
-      throw new Error(`Url:${url} Status: ${res.status}`)
+    let testResult = { url, ok: false };
+    try {
+      const res = await fetch(url);
+      testResult = { url, ok: res.ok };
+    } catch (err) {
+      if (this._options.throwErrors) {
+        throw new Error(`Url:${url} Status: ${res.status}`);
+      }
     }
     return testResult;
   }
