@@ -1,6 +1,6 @@
 {
   "name": "liquid-api-tester",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Test APIs connections by trying to fetch them. I really only need this to make health checks in docker orchestrations",
   "main": "dist/index.js",
   "scripts": {
@@ -26,6 +26,7 @@
   "devDependencies": {
     "@babel/cli": "^7.7.0",
     "@babel/core": "^7.7.2",
+    "@babel/plugin-transform-regenerator": "^7.8.3",
     "@babel/preset-env": "^7.7.1"
   },
   "dependencies": {
